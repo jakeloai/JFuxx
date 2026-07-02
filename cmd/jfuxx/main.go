@@ -1345,7 +1345,7 @@ func writeCurlScripts(hits []Finding, outDir string) {
 			body := h.RawRequest[bodyIdx+2:]
 			body = strings.TrimSpace(body)
 			if body != "" {
-				curlCmd.WriteString(fmt.Sprintf("-d '%s' ", strings.ReplaceAll(body, "'", "'\''")))
+				curlCmd.WriteString(fmt.Sprintf("-d '%s' ", strings.ReplaceAll(body, "'", "'\\''")))
 			}
 		}
 
@@ -1501,7 +1501,7 @@ func applyEncoding(payload, encoding string) string {
 func unicodeEscape(s string) string {
 	var b strings.Builder
 	for _, c := range s {
-		b.WriteString(fmt.Sprintf("\u%04x", c))
+		b.WriteString(fmt.Sprintf("\\u%04x", c))
 	}
 	return b.String()
 }
