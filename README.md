@@ -13,19 +13,19 @@ Built for precision over noise.
 ### Option 1: `go install` (Recommended)
 
 ```bash
-go install github.com/jakeloai/jfuxx/cmd/jfuxx@latest
+go install github.com/jakeloai/JLFuxx/cmd/jlfuxx@latest
 ```
 
 Then run from anywhere:
 ```bash
-jfuxx -h
+jlfuxx -h
 ```
 
 ### Option 2: Build from source
 
 ```bash
-git clone https://github.com/jakeloai/jfuxx.git
-cd jfuxx
+git clone https://github.com/jakeloai/JLFuxx.git
+cd jlfuxx
 make install
 ```
 
@@ -34,7 +34,7 @@ This compiles and copies the binary to `/usr/local/bin`.
 ### Option 3: Manual build
 
 ```bash
-go build -ldflags="-s -w" -o jfuxx ./cmd/jfuxx
+go build -ldflags="-s -w" -o jlfuxx ./cmd/jfuxx
 sudo mv jfuxx /usr/local/bin/
 ```
 
@@ -44,16 +44,16 @@ sudo mv jfuxx /usr/local/bin/
 
 ```bash
 # Basic directory brute
-jfuxx -r request.txt -w wordlist.txt -u http://target.com
+jlfuxx -r request.txt -w wordlist.txt -u http://target.com
 
 # With soft-404 detection and recursion
-jfuxx -r req.txt -w dirs.txt -u http://target.com -recursion -recursion-depth 2 -soft404 -acc
+jlfuxx -r req.txt -w dirs.txt -u http://target.com -recursion -recursion-depth 2 -soft404 -acc
 
 # Time-based blind detection
-jfuxx -r req.txt -w sqli.txt -u http://target.com -cal-rounds 15 -threshold 1.5 -mt 1000
+jlfuxx -r req.txt -w sqli.txt -u http://target.com -cal-rounds 15 -threshold 1.5 -mt 1000
 
 # Aggressive WAF evasion
-jfuxx -r req.txt -w payloads.txt -u http://target.com -evasion 2 -enc url|base64 -http2
+jlfuxx -r req.txt -w payloads.txt -u http://target.com -evasion 2 -enc url|base64 -http2
 ```
 
 ---
