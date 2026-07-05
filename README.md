@@ -13,7 +13,7 @@ Built for precision over noise.
 ### Option 1: `go install` (Recommended)
 
 ```bash
-go install github.com/jakeloai/JLFuxx/cmd/jlfuxx@latest
+go install github.com/jakeloai/jfuxx/cmd/jlfuxx@latest
 ```
 
 Then run from anywhere:
