@@ -1,4 +1,4 @@
-# JFuxx — Advanced Web Fuzzer
+# JLFuxx — Advanced Web Fuzzer
 
 > by **jakeloai**
 
